@@ -137,68 +137,110 @@
     </section>
     <section id="kontakt" class="contact-pt">
       <div class="container">
-        <div class="contact-wrapper">
-          <!-- Kontaktinformasjon -->
-          <div class="contact-info">
-            <h2>Klar for å <span>starte?</span></h2>
-            <p>
-              Send meg en uforpliktende melding, så tar vi en prat om dine mål
-              og hvordan jeg kan hjelpe deg.
-            </p>
-
-            <div class="info-item">
-              <div class="info-icon">📧</div>
-              <div class="info-text">
-                <span>E-post</span>
-                <p>patrick.fredriksen@trening.no</p>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <div class="info-icon">📍</div>
-              <div class="info-text">
-                <span>Sted</span>
-                <p>Bergen, Norge / Online</p>
-              </div>
-            </div>
-
-            <div class="social-links">
-              <a href="#" class="social-icon">Instagram</a>
-              <a href="#" class="social-icon">Facebook</a>
-              <a href="#" class="social-icon">LinkedIn</a>
+        <div class="quiz-container" id="quiz-card">
+          <div class="quiz-header">
+            <h2>Start din <span>transformasjon</span></h2>
+            <div class="progress-bar">
+              <div class="progress" id="progress"></div>
             </div>
           </div>
 
-          <!-- Kontaktskjema -->
-          <div class="contact-form-container">
-            <form class="contact-form">
+          <form id="booking-form">
+            <div class="quiz-step active" data-step="1">
+              <h3>Hva er navnet ditt?</h3>
               <div class="form-group">
-                <label>Navn</label>
-                <input type="text" placeholder="Ditt navn" required />
+                <input
+                  type="text"
+                  id="full-name"
+                  name="user_name"
+                  placeholder="Fornavn og etternavn"
+                  required
+                />
               </div>
               <div class="form-group">
-                <label>E-post</label>
-                <input type="email" placeholder="Din e-post" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="user_email"
+                  placeholder="Din e-postadresse"
+                  required
+                />
               </div>
-              <div class="form-group">
-                <label>Hva ønsker du hjelp med?</label>
-                <select>
-                  <option>1-til-1 Coaching</option>
-                  <option>Online Coaching</option>
-                  <option>Kostholdsplan</option>
-                  <option>Annet</option>
-                </select>
+              <button type="button" class="btn-next">Neste →</button>
+            </div>
+
+            <div class="quiz-step" data-step="2">
+              <h3>Hvor gammel er du?</h3>
+              <div class="quiz-options">
+                <label class="option-card">
+                  <input type="radio" name="alder" value="18-23" />
+                  <span>18 - 23</span>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="alder" value="24-30" />
+                  <span>24 - 30</span>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="alder" value="31-40" />
+                  <span>31 - 40</span>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="alder" value="40+" />
+                  <span>40+</span>
+                </label>
               </div>
-              <div class="form-group">
-                <label>Melding</label>
-                <textarea
-                  rows="5"
-                  placeholder="Fortell litt om dine mål..."
-                ></textarea>
+              <div class="step-btns">
+                <button type="button" class="btn-back">Tilbake</button>
+                <button type="button" class="btn-next">Neste →</button>
               </div>
-              <button type="submit" class="btn-submit">Send melding</button>
-            </form>
-          </div>
+            </div>
+
+            <div class="quiz-step" data-step="3">
+              <h3>Hvor ofte vil du trene?</h3>
+              <div class="quiz-options">
+                <label class="option-card">
+                  <input type="radio" name="frekvens" value="1-2" />
+                  <span>1-2 økter i uken</span>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="frekvens" value="3-4" />
+                  <span>3-4 økter i uken</span>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="frekvens" value="5+" />
+                  <span>5+ økter i uken</span>
+                </label>
+              </div>
+              <div class="step-btns">
+                <button type="button" class="btn-back">Tilbake</button>
+                <button type="button" class="btn-next">Neste →</button>
+              </div>
+            </div>
+
+            <div class="quiz-step" data-step="4">
+              <h3>Hvor foretrekker du å trene?</h3>
+              <div class="quiz-options">
+                <label class="option-card">
+                  <input type="radio" name="sted" value="Gym" />
+                  <span>I treningsstudio</span>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="sted" value="Hjemme" />
+                  <span>Hjemme</span>
+                </label>
+                <label class="option-card">
+                  <input type="radio" name="sted" value="Begge" />
+                  <span>Variert</span>
+                </label>
+              </div>
+              <div class="step-btns">
+                <button type="button" class="btn-back">Tilbake</button>
+                <button type="submit" class="btn-submit">
+                  Send forespørsel 🔥
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
