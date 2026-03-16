@@ -60,17 +60,18 @@
             alt="Patrick Fredriksen i trening"
           />
           <div class="experience-badge">
-            <span class="years">5+</span>
-            <span class="text">Års Erfaring</span>
+            <span class="years">Mange</span>
+            <span class="text">års Erfaring</span>
           </div>
         </div>
 
         <div class="about-text">
           <h2>Hvem er <span>Patrick?</span></h2>
           <p>
-            Jeg har brent for trening og helse i over et tiår. Min filosofi er
-            enkel: Trening skal ikke være en straff, men en investering i deg
-            selv som gir energi og mestringsfølelse.
+            Dette er et passion prosjekt - det merker kundene mine! Min
+            filosofi: små endringer utgjør store resultater! Dette er måten å
+            virkelig bli din beste deg. Dette er en investering kroppen din vil
+            takke deg for i LANG tid fremover!
           </p>
 
           <ul class="about-list">
@@ -85,6 +86,34 @@
             Sammen legger vi en plan som passer *din* hverdag, ikke naboen sin.
             Ingen snarveier, bare bærekraftige resultater.
           </p>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials-pt">
+      <div class="container">
+        <div class="testimonial-wrapper">
+          <div class="video-card">
+            <div class="video-container">
+              <video poster="kunde-bilde-placeholder.jpg" controls>
+                <source
+                  src="/wetransfer_img_4523-jpg_2026-03-12_1451/Captions_E08139.MOV"
+                  type="video/mp4"
+                />
+                Nettleseren din støtter ikke video.
+              </video>
+            </div>
+            <div class="video-info">
+              <h3>"Helt rå fremgang!"</h3>
+              <p>Hør hvordan Maria endret livsstilen sin på bare 12 uker.</p>
+              <a
+                href="/wetransfer_img_4523-jpg_2026-03-12_1451/54b319be-d77f-44b4-938c-eb47db569ebc.MP4"
+                target="_blank"
+                class="btn-long-video"
+              >
+                Se hele intervjuet (3 min)
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -148,10 +177,28 @@
       </div>
     </section>
     <section id="kontakt" class="contact-pt">
-      <div class="container">
+      <div class="container contact-wrapper">
+        <div class="contact-info">
+          <h2>Klar for å ta deg selv <span>seriøst?</span></h2>
+          <p>
+            Send en HELT uforpliktende melding, så tar vi en prat om hvordan jeg
+            kan hjelpe deg!
+          </p>
+
+          <div class="info-details">
+            <div class="info-item">
+              <span class="info-label">EPOST</span>
+              <p>pfredriksen84@gmail.com</p>
+            </div>
+            <div class="info-item">
+              <span class="info-label">STED</span>
+              <p>Holmestrand, Norge</p>
+            </div>
+          </div>
+        </div>
+
         <div class="quiz-container" id="quiz-card">
           <div class="quiz-header">
-            <h2>Start din <span>transformasjon</span></h2>
             <div class="progress-bar">
               <div class="progress" id="progress"></div>
             </div>
@@ -159,11 +206,10 @@
 
           <form id="booking-form">
             <div class="quiz-step active" data-step="1">
-              <h3>Hva er navnet ditt?</h3>
+              <h3>Hvem er du?</h3>
               <div class="form-group">
                 <input
                   type="text"
-                  id="full-name"
                   name="user_name"
                   placeholder="Fornavn og etternavn"
                   required
@@ -172,7 +218,6 @@
               <div class="form-group">
                 <input
                   type="email"
-                  id="email"
                   name="user_email"
                   placeholder="Din e-postadresse"
                   required
@@ -184,22 +229,26 @@
             <div class="quiz-step" data-step="2">
               <h3>Hvor gammel er du?</h3>
               <div class="quiz-options">
-                <label class="option-card">
-                  <input type="radio" name="alder" value="18-23" />
-                  <span>18 - 23</span>
-                </label>
-                <label class="option-card">
-                  <input type="radio" name="alder" value="24-30" />
-                  <span>24 - 30</span>
-                </label>
-                <label class="option-card">
-                  <input type="radio" name="alder" value="31-40" />
-                  <span>31 - 40</span>
-                </label>
-                <label class="option-card">
-                  <input type="radio" name="alder" value="40+" />
-                  <span>40+</span>
-                </label>
+                <label class="option-card"
+                  ><input type="radio" name="alder" value="18-23" /><span
+                    >18 - 23</span
+                  ></label
+                >
+                <label class="option-card"
+                  ><input type="radio" name="alder" value="24-30" /><span
+                    >24 - 30</span
+                  ></label
+                >
+                <label class="option-card"
+                  ><input type="radio" name="alder" value="31-40" /><span
+                    >31 - 40</span
+                  ></label
+                >
+                <label class="option-card"
+                  ><input type="radio" name="alder" value="40+" /><span
+                    >40+</span
+                  ></label
+                >
               </div>
               <div class="step-btns">
                 <button type="button" class="btn-back">Tilbake</button>
@@ -210,18 +259,21 @@
             <div class="quiz-step" data-step="3">
               <h3>Hvor ofte vil du trene?</h3>
               <div class="quiz-options">
-                <label class="option-card">
-                  <input type="radio" name="frekvens" value="1-2" />
-                  <span>1-2 økter i uken</span>
-                </label>
-                <label class="option-card">
-                  <input type="radio" name="frekvens" value="3-4" />
-                  <span>3-4 økter i uken</span>
-                </label>
-                <label class="option-card">
-                  <input type="radio" name="frekvens" value="5+" />
-                  <span>5+ økter i uken</span>
-                </label>
+                <label class="option-card"
+                  ><input type="radio" name="frekvens" value="1-2" /><span
+                    >1-2 økter i uken</span
+                  ></label
+                >
+                <label class="option-card"
+                  ><input type="radio" name="frekvens" value="3-4" /><span
+                    >3-4 økter i uken</span
+                  ></label
+                >
+                <label class="option-card"
+                  ><input type="radio" name="frekvens" value="5+" /><span
+                    >5+ økter i uken</span
+                  ></label
+                >
               </div>
               <div class="step-btns">
                 <button type="button" class="btn-back">Tilbake</button>
@@ -230,25 +282,23 @@
             </div>
 
             <div class="quiz-step" data-step="4">
-              <h3>Hvor foretrekker du å trene?</h3>
+              <h3>Hvor liker du å trene?</h3>
               <div class="quiz-options">
-                <label class="option-card">
-                  <input type="radio" name="sted" value="Gym" />
-                  <span>I treningsstudio</span>
-                </label>
-                <label class="option-card">
-                  <input type="radio" name="sted" value="Hjemme" />
-                  <span>Hjemme</span>
-                </label>
-                <label class="option-card">
-                  <input type="radio" name="sted" value="Begge" />
-                  <span>Variert</span>
-                </label>
+                <label class="option-card"
+                  ><input type="radio" name="sted" value="Gym" /><span
+                    >I studio</span
+                  ></label
+                >
+                <label class="option-card"
+                  ><input type="radio" name="sted" value="Hjemme" /><span
+                    >Hjemme</span
+                  ></label
+                >
               </div>
               <div class="step-btns">
                 <button type="button" class="btn-back">Tilbake</button>
                 <button type="submit" class="btn-submit">
-                  Send forespørsel 🔥
+                  Send melding 🔥
                 </button>
               </div>
             </div>
@@ -352,8 +402,24 @@
       </div>
     </section>-->
     <footer class="pt-footer">
-      <div class="container">
-        <p>&copy; 2026 Patrick Fredriksen. Alle rettigheter reservert.</p>
+      <div class="footer-container">
+        <div class="footer-logo">PETTER<span>F</span></div>
+
+        <ul class="footer-nav">
+          <li><a href="#home">Hjem</a></li>
+          <li><a href="#about">Om Meg</a></li>
+          <li><a href="#services">Tjenester</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Petter Fredriksen. Alle rettigheter reservert.</p>
+          <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
       </div>
     </footer>
     <script
