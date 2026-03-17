@@ -1,15 +1,20 @@
-/* Globale innstillinger */
+/* =========================================
+   1. GLOBALE INNSTILLINGER & RESET
+   ========================================= */
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #0a0a0a; /* Dyp sort */
-  color: #ffffff; /* Hvit tekst */
+  background-color: #0a0a0a;
+  color: #ffffff;
   line-height: 1.6;
   margin: 0;
+  overflow-x: hidden; /* Kritisk for mobil: fjerner slerking sidelengs */
 }
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Høyden på navbar */
+  scroll-padding-top: 80px;
 }
+
 h1,
 h2,
 h3,
@@ -20,16 +25,23 @@ h3,
   letter-spacing: -1px;
 }
 
-/* Header Styling */
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* =========================================
+   2. HEADER & NAVIGASJON
+   ========================================= */
 .pt-header {
-  background: rgba(10, 10, 10, 0.95); /* Gjennomsiktig sort */
+  background: rgba(10, 10, 10, 0.95);
   color: #ffffff;
   padding: 20px 0;
-  border-bottom: 1px solid #222; /* Subtil linje i bunnen */
+  border-bottom: 1px solid #222;
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(10px); /* Moderne blur-effekt */
+  backdrop-filter: blur(10px);
 }
 
 .pt-header .container {
@@ -47,15 +59,15 @@ h3,
 }
 
 .logo span {
-  color: #007bff; /* Blåfargen beholdes */
+  color: #007bff;
 }
 
-/* Navigasjon */
 .nav-menu ul {
   display: flex;
   list-style: none;
   align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 .nav-menu ul li {
@@ -63,10 +75,8 @@ h3,
 }
 
 .nav-menu ul li a {
-  text-decoration: none;
-  color: #bbbbbb; /* Gråhvit for mindre fokus enn logo */
+  color: #bbbbbb;
   font-weight: 500;
-  transition: 0.3s;
 }
 
 .nav-menu ul li a:hover {
@@ -88,7 +98,9 @@ h3,
   box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
 }
 
-/* Hero Seksjon */
+/* =========================================
+   3. HERO SEKSJON
+   ========================================= */
 .hero-pt {
   padding: 100px 0;
   background-color: #0a0a0a;
@@ -112,7 +124,7 @@ h3,
 .badge {
   display: inline-block;
   padding: 6px 16px;
-  background: rgba(0, 123, 255, 0.15); /* Litt sterkere blå i mørket */
+  background: rgba(0, 123, 255, 0.15);
   color: #007bff;
   border-radius: 20px;
   font-weight: 700;
@@ -135,14 +147,13 @@ h3,
 
 .hero-text p {
   font-size: 1.1rem;
-  color: #cccccc; /* Lys grå for bedre lesbarhet mot sort */
+  color: #cccccc;
   margin-bottom: 35px;
   line-height: 1.6;
   max-width: 500px;
   font-weight: 400;
 }
 
-/* Knapper i Hero */
 .hero-btns {
   display: flex;
   gap: 15px;
@@ -153,10 +164,8 @@ h3,
   color: white;
   padding: 16px 32px;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
-  transition: 0.3s;
 }
 
 .btn-primary:hover {
@@ -170,10 +179,8 @@ h3,
   color: #ffffff;
   padding: 16px 32px;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
-  transition: 0.3s;
 }
 
 .btn-secondary:hover {
@@ -181,7 +188,6 @@ h3,
   border-color: #444;
 }
 
-/* Bilde-styling */
 .hero-image {
   flex: 1;
   position: relative;
@@ -195,7 +201,7 @@ h3,
   height: auto;
   border-radius: 20px;
   z-index: 2;
-  filter: brightness(0.9); /* Gjør bildet litt mørkere for å passe stilen */
+  filter: brightness(0.9);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
@@ -213,27 +219,12 @@ h3,
   z-index: 1;
 }
 
-/* Responsivitet */
-@media (max-width: 768px) {
-  .hero-wrapper {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 50px;
-  }
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-  .hero-btns {
-    justify-content: center;
-  }
-  .hero-text p {
-    margin: 0 auto 30px;
-  }
-}
-/* Om meg Seksjon */
+/* =========================================
+   4. OM MEG SEKSJON
+   ========================================= */
 .about-pt {
   padding: 100px 0;
-  background-color: #0d0d0d; /* Litt lysere enn #0a0a0a for å skape skille */
+  background-color: #0d0d0d;
 }
 
 .about-wrapper {
@@ -253,10 +244,9 @@ h3,
 .about-image img {
   width: 100%;
   border-radius: 15px;
-  box-shadow: 20px 20px 0px #007bff; /* Blå ramme-effekt som ligger bak */
+  box-shadow: 20px 20px 0px #007bff;
 }
 
-/* Erfarings-boble som "flyter" over bildet */
 .experience-badge {
   position: absolute;
   bottom: -20px;
@@ -301,7 +291,6 @@ h3,
   font-size: 1.05rem;
 }
 
-/* Liste med kulepunkter */
 .about-list {
   list-style: none;
   padding: 0;
@@ -323,19 +312,9 @@ h3,
   font-style: normal;
 }
 
-/* Responsivitet for mobil */
-@media (max-width: 768px) {
-  .about-wrapper {
-    flex-direction: column-reverse; /* Bildet kommer under teksten på mobil */
-    gap: 40px;
-    text-align: center;
-  }
-
-  .about-image img {
-    box-shadow: 10px 10px 0px #007bff;
-  }
-}
-/* Tjenester Seksjon */
+/* =========================================
+   5. TJENESTER SEKSJON
+   ========================================= */
 .services-pt {
   padding: 100px 0;
   background-color: #0a0a0a;
@@ -360,7 +339,6 @@ h3,
   font-size: 1.1rem;
 }
 
-/* Grid Layout */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -370,16 +348,13 @@ h3,
   padding: 0 20px;
 }
 
-/* Kort Styling */
 .service-card {
   background: #151515;
   border: 1px solid #222;
   padding: 50px 30px;
   border-radius: 20px;
   text-align: center;
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease;
+  transition: 0.3s ease;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -390,15 +365,10 @@ h3,
   border-color: #333;
 }
 
-/* Highlighted Kort (Den i midten) */
 .service-card.highlight {
   border: 2px solid #007bff;
   background: #1a1a1a;
   transform: scale(1.05);
-}
-
-.service-card.highlight:hover {
-  transform: scale(1.05) translateY(-5px);
 }
 
 .popular-badge {
@@ -438,7 +408,6 @@ h3,
   font-weight: 400;
 }
 
-/* Liste i kortet */
 .service-features {
   list-style: none;
   padding: 0;
@@ -459,20 +428,15 @@ h3,
   content: "•";
   color: #007bff;
   font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: 0;
+  margin-right: 10px;
 }
 
-/* Knapper i kort */
 .btn-service {
-  text-decoration: none;
   color: #fff;
   border: 2px solid #333;
   padding: 12px 25px;
   border-radius: 8px;
   font-weight: 700;
-  transition: 0.3s;
   text-transform: uppercase;
   font-size: 0.85rem;
 }
@@ -493,16 +457,83 @@ h3,
   color: #fff;
 }
 
-/* Responsivitet */
-@media (max-width: 992px) {
-  .service-card.highlight {
-    transform: scale(1);
-  }
-  .service-card.highlight:hover {
-    transform: translateY(-10px);
-  }
+/* =========================================
+   6. TESTIMONIAL VIDEO SEKSJON
+   ========================================= */
+.testimonials-pt {
+  padding: 80px 0;
+  background-color: #0a0a0a;
 }
-/* --- KONTAKT & QUIZ SEKSJON --- */
+
+.testimonial-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.video-card {
+  background: #151515;
+  border: 1px solid #222;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 30px;
+  max-width: 800px;
+}
+
+.video-container {
+  flex: 0 0 250px;
+  height: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-info {
+  flex: 1;
+}
+
+.video-info h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.video-info p {
+  color: #888;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.btn-long-video {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid #007bff;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.btn-long-video:hover {
+  background: #007bff;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   7. KONTAKT & QUIZ SEKSJON
+   ========================================= */
 .contact-pt {
   padding: 100px 0;
   background-color: #0d0d0d;
@@ -518,7 +549,6 @@ h3,
   padding: 0 20px;
 }
 
-/* Venstre side: Tekst og info */
 .contact-info {
   flex: 1;
   max-width: 480px;
@@ -529,7 +559,6 @@ h3,
   line-height: 1.1;
   margin-bottom: 25px;
   color: #fff;
-  letter-spacing: -1.5px;
   text-transform: uppercase;
 }
 
@@ -541,7 +570,6 @@ h3,
   color: #888;
   font-size: 1.15rem;
   margin-bottom: 50px;
-  line-height: 1.6;
 }
 
 .info-details {
@@ -566,18 +594,18 @@ h3,
   font-size: 1.3rem;
   font-weight: 600;
   margin: 0;
-  text-decoration: none;
 }
 
-/* Høyre side: Quiz kortet - SENTRERT */
 .quiz-container {
   flex: 1.2;
   background: #151515;
-  padding: 45px;
+  padding: 40px; /* Litt mindre padding som standard */
   border-radius: 24px;
   border: 1px solid #222;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-  text-align: center; /* Dette sentrerer overskriftene "HVEM ER DU?" osv. */
+  text-align: center;
+  width: 100%; /* Sørger for at den bruker all tilgjengelig plass */
+  box-sizing: border-box; /* Viktig: Inkluderer padding i bredden */
 }
 
 .progress-bar {
@@ -619,33 +647,72 @@ h3,
   margin-bottom: 25px;
   color: #fff;
   font-size: 1.6rem;
-  text-transform: uppercase;
 }
 
-/* Input felt */
+.quiz-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.option-card {
+  flex: 1;
+  min-width: 140px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-card input[type="radio"] {
+  display: none;
+}
+
+.option-card span {
+  color: #fff;
+  font-weight: 600;
+}
+
+.option-card:hover {
+  border-color: #007bff;
+  background: #252525;
+}
+
+.option-card:has(input:checked) {
+  background: rgba(0, 123, 255, 0.1);
+  border: 2px solid #007bff;
+}
+
 .form-group input {
   width: 100%;
   padding: 16px;
-  background: #1e1e1e; /* Litt lysere for å matche bildet */
+  background: #1e1e1e;
   border: 1px solid #333;
   border-radius: 10px;
   color: white;
   margin-bottom: 15px;
   font-size: 1rem;
-  text-align: left; /* Teksten man skriver er til venstre */
+  box-sizing: border-box; /* Hindrer at feltet stikker utenfor boksen */
+  -webkit-appearance: none; /* Fjerner standard iOS-skygger */
 }
 
-/* Knapp-seksjonen sentrert */
 .step-btns {
   display: flex;
   gap: 15px;
-  justify-content: center; /* Sentrerer knappen i midten */
+  justify-content: center;
   margin-top: 20px;
 }
 
 .btn-next,
 .btn-submit {
-  min-width: 180px; /* Gir knappen litt størrelse som på bildet */
+  min-width: 180px;
   background: #007bff;
   color: white;
   border: none;
@@ -654,7 +721,6 @@ h3,
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .btn-back {
@@ -668,28 +734,19 @@ h3,
   cursor: pointer;
 }
 
-.btn-next:hover,
-.btn-submit:hover {
-  background: #0056b3;
-}
-/* --- FOOTER STYLING --- */
+/* =========================================
+   8. FOOTER STYLING
+   ========================================= */
 .pt-footer {
   background-color: #0a0a0a;
-  padding: 60px 0 30px; /* Litt mer luft i toppen enn bunnen */
+  padding: 60px 0 30px;
   border-top: 1px solid #222;
   text-align: center;
-}
-
-.footer-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .footer-logo {
   font-size: 1.8rem;
   font-weight: 800;
-  text-transform: uppercase;
   margin-bottom: 20px;
   color: #fff;
 }
@@ -709,11 +766,8 @@ h3,
 
 .footer-nav a {
   color: #888;
-  text-decoration: none;
   font-size: 0.9rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.3s;
 }
 
 .footer-nav a:hover {
@@ -732,23 +786,22 @@ h3,
 .copyright {
   color: #444;
   font-size: 0.85rem;
-  margin: 0;
 }
 
-/* Northweb lenken */
 .northweb.reklame {
-  color: #555; /* Diskret gråfarge */
-  text-decoration: none;
+  color: #555;
   font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: 0.3s;
 }
 
 .northweb.reklame:hover {
-  color: #007bff; /* Blir blå ved hover for å matche din stil */
+  color: #007bff;
 }
-/* --- RESPONSIVITET --- */
+
+/* =========================================
+   9. MOBILVERSJON (RESPONSIVITET) - ALL FIX HER
+   ========================================= */
+
 @media (max-width: 950px) {
   .contact-wrapper {
     flex-direction: column;
@@ -756,89 +809,152 @@ h3,
     gap: 60px;
   }
 }
-/* --- TESTIMONIAL VIDEO SEKSJON --- */
-.testimonials-pt {
-  padding: 80px 0;
-  background-color: #0a0a0a;
-}
 
-.testimonial-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.video-card {
-  background: #151515;
-  border: 1px solid #222;
-  border-radius: 24px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 30px;
-  max-width: 800px;
-}
-
-.video-container {
-  flex: 0 0 250px; /* Bestemmer bredden på den stående videoen */
-  height: 450px;
-  border-radius: 15px;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
-}
-
-.video-container video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Sørger for at videoen fyller ramma */
-}
-
-.video-info {
-  flex: 1;
-}
-
-.video-info h3 {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 15px;
-}
-
-.video-info p {
-  color: #888;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-.btn-long-video {
-  display: inline-block;
-  padding: 12px 25px;
-  border: 2px solid #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  transition: 0.3s;
-}
-
-.btn-long-video:hover {
-  background: #007bff;
-  transform: translateY(-3px);
-}
-
-/* Responsivitet for mobil */
 @media (max-width: 768px) {
+  /* Globale justeringer for mobil */
+  section {
+    padding: 60px 0;
+  }
+
+  /* Navigasjon */
+  .nav-menu {
+    display: none; /* Skjul vanlig meny - her bør du ha en burgermeny-løsning i HTML/JS */
+  }
+
+  /* Hero Mobil */
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
+  .hero-image img {
+    max-width: 300px;
+  }
+
+  /* Om Meg Mobil */
+  .about-wrapper {
+    flex-direction: column-reverse; /* Tekst over bilde på mobil */
+    gap: 40px;
+    text-align: center;
+  }
+  .about-image img {
+    box-shadow: 10px 10px 0px #007bff;
+  }
+  .experience-badge {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin: 20px auto 0;
+    display: inline-block;
+  }
+
+  /* Tjenester Mobil */
+  .service-card.highlight {
+    transform: scale(1); /* Fjern forstørrelse på mobil for å unngå overlapp */
+  }
+
+  /* Testimonials Mobil */
   .video-card {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
   .video-container {
     flex: 0 0 auto;
     width: 100%;
     max-width: 300px;
+    height: auto;
+    aspect-ratio: 9 / 16; /* Beholder formatet uansett skjerm */
+  }
+
+  /* Quiz Mobil */
+  .quiz-container {
+    padding: 25px 15px;
+  }
+  .quiz-options {
+    flex-direction: column;
+  }
+  .option-card {
+    width: 100%;
+  }
+  .step-btns {
+    flex-direction: column;
+  }
+  .btn-next,
+  .btn-back,
+  .btn-submit {
+    width: 100%;
+  }
+
+  /* Footer Mobil */
+  .footer-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .contact-info h2 {
+    font-size: 2.2rem;
+  }
+  .info-item p,
+  .info-item a {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  /* Fikser selve quiz-boksen på mobil */
+  .quiz-container {
+    padding: 25px 15px; /* Mye mindre padding på mobil */
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+
+  /* Gjør tekstboksene (input) store nok for fingre, men innenfor ramma */
+  .form-group input {
+    padding: 14px;
+    font-size: 16px; /* Forhindrer at iPhone zoomer inn automatisk ved klikk */
+  }
+
+  /* Fikser alternativ-kortene (radioknappene) */
+  .quiz-options {
+    flex-direction: column; /* Legger dem oppå hverandre */
+    gap: 10px;
+  }
+
+  .option-card {
+    width: 100%;
+    min-width: unset; /* Fjerner tvungen bredde */
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  /* Sørger for at knappene (Neste/Tilbake) ikke kræsjer */
+  .step-btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-next,
+  .btn-back,
+  .btn-submit {
+    width: 100%; /* Full bredde på knapper gjør det lettere å trykke */
+    min-width: unset;
+    padding: 14px;
   }
 }
