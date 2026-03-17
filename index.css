@@ -672,21 +672,18 @@ h3,
 .btn-submit:hover {
   background: #0056b3;
 }
-/* --- DEN NYE FOOTEREN DIN --- */
+/* --- FOOTER STYLING --- */
 .pt-footer {
   background-color: #0a0a0a;
-  padding: 80px 0 40px;
+  padding: 60px 0 30px; /* Litt mer luft i toppen enn bunnen */
   border-top: 1px solid #222;
+  text-align: center;
 }
 
 .footer-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
 .footer-logo {
@@ -703,6 +700,7 @@ h3,
 
 .footer-nav {
   display: flex;
+  justify-content: center;
   gap: 30px;
   list-style: none;
   padding: 0;
@@ -712,11 +710,10 @@ h3,
 .footer-nav a {
   color: #888;
   text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: 0.3s;
 }
 
 .footer-nav a:hover {
@@ -724,29 +721,32 @@ h3,
 }
 
 .footer-bottom {
-  width: 100%;
-  padding-top: 40px;
   border-top: 1px solid #1a1a1a;
-  color: #444;
-  font-size: 0.8rem;
+  padding-top: 30px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 15px;
 }
 
-.social-links {
-  display: flex;
-  gap: 20px;
-}
-
-.social-links a {
+.copyright {
   color: #444;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Northweb lenken */
+.northweb.reklame {
+  color: #555; /* Diskret gråfarge */
   text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   transition: 0.3s;
 }
 
-.social-links a:hover {
-  color: #007bff;
+.northweb.reklame:hover {
+  color: #007bff; /* Blir blå ved hover for å matche din stil */
 }
 /* --- RESPONSIVITET --- */
 @media (max-width: 950px) {
