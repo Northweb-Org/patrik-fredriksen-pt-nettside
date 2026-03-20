@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         name: userName,
         email: userEmail,
         // We inject the quiz answers directly into the message body
-        message: `Ny PT-henvendelse fra nettsiden!\n\nAlder: ${alder}\nØnsket frekvens: ${frekvens}\nForetrukket sted: ${sted}`,
+        message: `Ny PT-henvendelse fra nettsiden!\n\nAlder: ${alder} år\nØnsket frekvens: ${frekvens} dager i uken\nForetrukket sted: ${sted}`,
       };
 
       // 4. Send to your centralized agency API
